@@ -4,7 +4,41 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(
+  document.getElementById('root')
+  );
+//root = React.createElement('h1', { className: 'greeting' }, 'Hello, world!');
+
+const postItem = React.createElement(
+  'div',
+  { 
+      className: 'post-item'
+  },
+  React.createElement(
+      'h1',
+      {
+          title:"hello",
+          className: "heading"
+      },
+      'Hello guys!'
+  ),
+  React.createElement(
+      'ul',
+      null,
+      React.createElement(
+              'li',
+              null,
+              'Javascript'
+          ),
+          React.createElement(
+              'li',
+              null,
+              'RactJS'
+          )
+  ),
+);
+
+
 root.render(
   <React.StrictMode>
     <App />
