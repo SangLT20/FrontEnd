@@ -34,7 +34,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 //import App from './App';
 import reportWebVitals from './reportWebVitals';
-import State from './js/setState.js'
+import State from './js/useState.js'
+import ReactEffect from './js/useEffect.js'
+import {ReactLayoutEffect} from './js/useLayoutEffect.js'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root')
@@ -85,11 +87,27 @@ const ul = <ul className="coures-list">
   <li style={{color:'blue'}}>{reactCourse}</li>
 </ul>
 
+// //Fake comments
+// function emitComment(id){
+//   setInterval(() => {
+//     window.dispatchEvent(
+//       new CustomEvent(`event_${id}`, {detail: `Content of lesson ${id}`})
+//     )
+//   }, 2000);
+// }
 
+// // windown.addEventListener(`event_${id}`, ()=> {})
+// // windown.removeEventListener(`event_${id}`, ()=> {})
+
+// emitComment(1);
+// emitComment(2);
+// emitComment(3);
 
 root.render(
-  <State />
-  
+  //<State />
+  //ul
+  //<ReactEffect />
+  <ReactLayoutEffect />
   //postItem
   // <React.StrictMode>
   //   <App />
@@ -99,7 +117,7 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals(console.log);
+//reportWebVitals(console.log);
 
 //start: npm start
 //stop: ctrl + c
